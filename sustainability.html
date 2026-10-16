@@ -3,10 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>
-      บริการรับฝากเก็บสินค้า (วัตถุดิบแช่แข็ง) - บริษัท เอ็น เอส โคลด์ สโตเรจ
-      จำกัด
-    </title>
+    <title>บริการของเรา - บริษัท เอ็น เอส โคลด์ สโตเรจ จำกัด</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./images/Logo.png" />
 
@@ -39,99 +36,84 @@
         background-color: #e62e2d;
       }
 
-      .bg-grid-pattern {
-        background-image: radial-gradient(
-          rgba(0, 77, 153, 0.07) 1.5px,
-          transparent 1.5px
-        );
-        background-size: 24px 24px;
-      }
-
-      .step-card {
-        background: #ffffff;
-        border-radius: 1.5rem;
+      .service-card-new {
+        background-color: #ffffff;
         border: 1px solid #e2e8f0;
-        box-shadow: 0 10px 25px -5px rgba(0, 34, 85, 0.06);
-        transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-        position: relative;
+        border-radius: 24px;
+        padding: 18px;
+        box-shadow: 0 12px 30px -10px rgba(0, 34, 85, 0.12);
         display: flex;
         flex-direction: column;
-        height: 100%;
-        margin-top: 1.5rem;
+        justify-content: space-between;
+        transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        text-decoration: none;
+        position: relative;
       }
-      .step-card:hover {
-        transform: translateY(-6px);
+      .service-card-new:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 45px -10px rgba(0, 92, 230, 0.22);
         border-color: #38bdf8;
-        box-shadow:
-          0 22px 40px -12px rgba(0, 92, 230, 0.16),
-          0 0 0 1px rgba(56, 189, 248, 0.3);
       }
 
-      .step-card-badge {
-        background: linear-gradient(
-          90deg,
-          #002255 0%,
-          #0044cc 50%,
-          #002255 100%
-        );
-        color: white;
-        padding: 6px 28px;
-        border-radius: 9999px;
-        position: absolute;
-        top: -18px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 1.1rem;
-        font-weight: 500;
-        white-space: nowrap;
-        box-shadow: 0 4px 12px rgba(0, 51, 128, 0.35);
-        border: 2px solid #ffffff;
-        z-index: 10;
-        display: flex;
-        align-items: center;
-      }
-
-      .step-img-frame {
-        padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+      .service-img-wrapper {
         width: 100%;
-      }
-      .step-img-inner {
-        border-radius: 1rem;
+        aspect-ratio: 4 / 3;
+        border-radius: 18px;
         overflow: hidden;
         background-color: #f8fafc;
-        border: 1px solid #e2e8f0;
-        box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.04);
-        padding: 0.5rem;
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
+        border: 1px solid #edf2f7;
       }
-      .step-img-inner img {
+      .service-img-wrapper img {
         width: 100%;
-        height: auto;
-        max-height: 240px;
+        height: 100%;
         object-fit: contain;
         transition: transform 0.5s ease;
-        border-radius: 0.75rem;
       }
-      .step-card:hover .step-img-inner img {
+      .service-card-new:hover .service-img-wrapper img {
         transform: scale(1.04);
       }
 
-      .step-content {
-        padding: 1rem 1.5rem 1.5rem 1.5rem;
-        flex-grow: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(to bottom, #ffffff, #f4f7fb);
-        border-bottom-left-radius: 1.5rem;
-        border-bottom-right-radius: 1.5rem;
-      }
-      .step-desc {
-        color: #334155;
+      .service-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1e293b;
+        margin-top: 1.25rem;
+        margin-bottom: 0.5rem;
         text-align: center;
-        line-height: 1.6;
+        transition: color 0.3s ease;
+      }
+      .service-card-new:hover .service-title {
+        color: #005ce6;
+      }
+
+      .service-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 0.75rem;
+        margin-bottom: 0.5rem;
+      }
+      .service-link-item {
+        font-size: 0.9rem;
+        color: #0284c7;
+        text-decoration: none;
+        padding: 6px 18px;
+        border-radius: 9999px;
+        background-color: #f0f9ff;
+        border: 1px solid #bae6fd;
+        transition: all 0.25s ease;
+        font-weight: 500;
+      }
+      .service-link-item:hover {
+        background-color: #005ce6;
+        color: #ffffff;
+        border-color: #005ce6;
+        box-shadow: 0 4px 12px rgba(0, 92, 230, 0.25);
       }
 
       @media (min-width: 769px) {
@@ -383,10 +365,6 @@
         .mobile-toggle-icon.rotate {
           transform: rotate(180deg);
         }
-
-        .step-desc br {
-          display: none;
-        }
       }
     </style>
   </head>
@@ -560,7 +538,7 @@
               <div id="servicesMenu" class="dropdown-menu">
                 <a
                   href="services.html"
-                  class="dropdown-item"
+                  class="dropdown-item font-medium text-blue-600 bg-blue-50 md:bg-transparent"
                   data-i18n="navServices"
                   >บริการของเรา</a
                 >
@@ -594,7 +572,7 @@
                     >
                     <a
                       href="service-raw-materials.html"
-                      class="dropdown-item font-medium text-blue-600 bg-blue-50 md:bg-transparent"
+                      class="dropdown-item"
                       data-i18n="subRawMaterials"
                       >สินค้าวัตถุดิบแช่แข็ง</a
                     >
@@ -718,7 +696,7 @@
 
     <!-- Hero Gradient Stage -->
     <div
-      class="relative bg-gradient-to-b from-[#001a40] via-[#002b66] to-[#f4f7fb] pt-8 md:pt-12 pb-14 overflow-hidden"
+      class="relative bg-gradient-to-b from-[#001a40] via-[#002b66] to-[#f4f7fb] pt-8 md:pt-12 pb-16 overflow-hidden flex-grow"
     >
       <div
         class="hidden md:block absolute top-10 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"
@@ -727,475 +705,102 @@
         class="hidden md:block absolute bottom-10 right-1/4 w-96 h-96 bg-sky-400/15 rounded-full blur-3xl pointer-events-none"
       ></div>
 
-      <div class="container mx-auto px-4 max-w-5xl relative z-10">
-        <div class="text-center mb-8 relative">
-          <div
-            class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md text-sky-300 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-3 border border-white/20 shadow-sm"
+      <!-- Main Content -->
+      <main class="container mx-auto px-4 max-w-5xl relative z-10">
+        <div
+          class="bg-gradient-to-r from-[#003380] via-[#005ce6] to-[#003380] text-white text-center py-5 rounded-2xl text-2xl md:text-3xl font-medium mb-12 shadow-xl border border-white/20 relative overflow-hidden"
+        >
+          <i
+            class="fas fa-cubes text-7xl text-white/5 absolute -left-2 -bottom-3 pointer-events-none transform -rotate-12"
+          ></i>
+          <span class="relative z-10" data-i18n="navServices"
+            >บริการของเรา</span
           >
-            <i class="fas fa-snowflake text-sky-400"></i>
-            <span>Cold Storage Service</span>
-          </div>
-
-          <h1
-            class="text-2xl md:text-4xl font-bold text-white mb-2 tracking-tight drop-shadow-md"
-          >
-            บริการ "รับฝากเก็บสินค้า"
-          </h1>
-          <h2
-            class="text-lg md:text-2xl text-sky-200 font-medium bg-white/10 backdrop-blur-md inline-block px-6 py-1.5 rounded-full border border-white/20 shadow-sm mt-1"
-          >
-            ประเภทสินค้า "วัตถุดิบแช่แข็ง"
-          </h2>
         </div>
 
-        <div class="flex justify-center px-2 md:px-4">
-          <div
-            class="relative group max-w-3xl w-full rounded-[2rem] p-3 sm:p-4 bg-gradient-to-br from-white/90 to-blue-50/90 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.5)] border border-white/30 backdrop-blur-sm"
-          >
-            <div
-              class="absolute inset-0 bg-blue-500/20 rounded-[2rem] blur-xl transform group-hover:scale-105 transition duration-700 -z-10"
-            ></div>
-            <div
-              class="relative rounded-2xl overflow-hidden bg-slate-100 shadow-inner"
-            >
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 px-2 md:px-6"
+        >
+          <a href="service-freeze.html" class="service-card-new group">
+            <div class="service-img-wrapper">
+              <img src="./images/ฟรีส (Freeze).jpeg" alt="บริการฟรีส" />
+            </div>
+            <div>
+              <h3 class="service-title" data-i18n="srvFreeze">
+                บริการฟรีส (Freeze)
+              </h3>
+            </div>
+          </a>
+
+          <div class="service-card-new group border-[#e2e8f0]">
+            <div class="service-img-wrapper">
               <img
-                src="./images/NS_1.jpg"
-                alt="บริการรับฝากเก็บสินค้าวัตถุดิบแช่แข็ง"
-                class="w-full h-auto object-contain block transform group-hover:scale-105 transition duration-700"
-                onerror="
-                  this.onerror = null;
-                  this.src =
-                    'https://placehold.co/800x400/e2e8f0/1e293b?text=NS_1_2.jpg';
-                "
+                src="./images/รับฝากเก็บสินค้า.jpeg"
+                alt="บริการรับฝากเก็บสินค้า"
               />
             </div>
+            <div>
+              <h3 class="service-title" data-i18n="srvStorage">
+                บริการรับฝากเก็บสินค้า
+              </h3>
+              <div class="service-links">
+                <a
+                  href="service-finished-goods.html"
+                  class="service-link-item"
+                  data-i18n="subFinishedGoods"
+                  >สินค้าสำเร็จรูป</a
+                >
+                <a
+                  href="service-raw-materials.html"
+                  class="service-link-item"
+                  data-i18n="subRawMaterials"
+                  >สินค้าวัตถุดิบแช่แข็ง</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <a href="services.html" class="service-card-new group">
+            <div class="service-img-wrapper">
+              <img
+                src="./images/คัดขนาดปลาทูน่า.jpeg"
+                alt="บริการคัดขนาดปลาทูน่า"
+              />
+            </div>
+            <div>
+              <h3 class="service-title" data-i18n="srvSorting">
+                บริการคัดขนาดปลาทูน่า
+              </h3>
+            </div>
+          </a>
+
+          <div class="service-card-new group border-[#e2e8f0]">
+            <div class="service-img-wrapper">
+              <img src="./images/บริการส่งมอบ.jpg" alt="บริการส่งมอบสินค้า" />
+            </div>
+            <div>
+              <h3 class="service-title" data-i18n="navDelivery">
+                บริการส่งมอบสินค้า
+              </h3>
+              <div class="service-links">
+                <a
+                  href="delivery-finished-goods.html"
+                  class="service-link-item"
+                  data-i18n="subFinishedGoods"
+                  >สินค้าสำเร็จรูป</a
+                >
+                <a
+                  href="delivery-raw-materials.html"
+                  class="service-link-item"
+                  data-i18n="subRawMaterials"
+                  >สินค้าวัตถุดิบแช่แข็ง</a
+                >
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
-
-    <!-- Main Content -->
-    <main class="container mx-auto px-4 max-w-5xl py-8 md:py-12 flex-grow">
-      <div
-        class="bg-gradient-to-r from-[#001f4d] via-[#003380] to-[#001f4d] text-white text-center py-5 px-6 rounded-t-3xl text-xl md:text-2xl font-medium shadow-lg border-b-4 border-[#38bdf8] relative overflow-hidden"
-      >
-        <i
-          class="fas fa-boxes-stacked text-7xl text-white/5 absolute -left-2 -bottom-3 pointer-events-none transform -rotate-12"
-        ></i>
-        <i
-          class="fas fa-snowflake text-7xl text-white/5 absolute -right-2 -top-3 pointer-events-none transform rotate-12"
-        ></i>
-        <span class="relative z-10 drop-shadow-sm">
-          ขั้นตอนและกระบวนการรับฝากเก็บสินค้า ประเภทสินค้าวัตถุดิบแช่แข็ง
-        </span>
-      </div>
-
-      <div
-        class="bg-grid-pattern rounded-b-3xl shadow-xl border border-slate-200/90 p-6 md:p-10 mb-12"
-      >
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 md:gap-y-16"
-        >
-          <!-- ขั้นตอนที่ 1 -->
-          <div class="step-card">
-            <div class="step-card-badge">
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 mr-2"
-              ></span>
-              ขั้นตอนที่ 1
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 ml-2"
-              ></span>
-            </div>
-            <div class="step-img-frame">
-              <div class="step-img-inner">
-                <img src="./images/NS_3.jpg" alt="ขั้นตอนที่ 1" />
-              </div>
-            </div>
-            <div class="step-content">
-              <p class="step-desc text-sm md:text-base font-normal">
-                ลูกค้าที่ต้องการฝากสินค้าต้องแจ้งกับทางฝ่ายการตลาด<br
-                  class="hidden md:inline"
-                />
-                บริษัท NS Cold Storage ล่วงหน้าอย่างน้อย 1 วัน<br
-                  class="hidden md:inline"
-                />
-                หลังจากนั้นทางเจ้าหน้าที่คลังสินค้าจะจัดเตรียมพื้นที่<br
-                  class="hidden md:inline"
-                />
-                เพื่อรองรับการฝากในขั้นต่อไป
-              </p>
-            </div>
-          </div>
-
-          <!-- ขั้นตอนที่ 2 -->
-          <div class="step-card">
-            <div class="step-card-badge">
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 mr-2"
-              ></span>
-              ขั้นตอนที่ 2
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 ml-2"
-              ></span>
-            </div>
-            <div class="step-img-frame">
-              <div class="step-img-inner">
-                <img src="./images/NS_4.jpg" alt="ขั้นตอนที่ 2" />
-              </div>
-            </div>
-            <div class="step-content">
-              <p class="step-desc text-sm md:text-base font-normal">
-                รถบรรทุกสินค้าติดต่อด้านหน้าบริษัทฯ<br
-                  class="hidden md:inline"
-                />
-                เพื่อให้ข้อมูลการฝาก - เบิกสินค้าแก่ รปภ.<br
-                  class="hidden md:inline"
-                />
-                และแลกบัตรในการผ่านเข้า-ออก
-              </p>
-            </div>
-          </div>
-
-          <!-- ขั้นตอนที่ 3 -->
-          <div class="step-card">
-            <div class="step-card-badge">
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 mr-2"
-              ></span>
-              ขั้นตอนที่ 3
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 ml-2"
-              ></span>
-            </div>
-            <div class="step-img-frame">
-              <div class="step-img-inner">
-                <img src="./images/NS_5.jpg" alt="ขั้นตอนที่ 3" />
-              </div>
-            </div>
-            <div class="step-content">
-              <p class="step-desc text-sm md:text-base font-normal">
-                รถบรรทุกขึ้นตาชั่งน้ำหนัก เพื่อบันทึกข้อมูลและรับบัตรคิว
-              </p>
-            </div>
-          </div>
-
-          <!-- ขั้นตอนที่ 4 -->
-          <div class="step-card">
-            <div class="step-card-badge">
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 mr-2"
-              ></span>
-              ขั้นตอนที่ 4
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 ml-2"
-              ></span>
-            </div>
-            <div class="step-img-frame">
-              <div class="step-img-inner">
-                <img src="./images/NS_6.jpg" alt="ขั้นตอนที่ 4" />
-              </div>
-            </div>
-            <div class="step-content">
-              <p class="step-desc text-sm md:text-base font-normal">
-                นายหัวรถติดต่อเช็คเกอร์ (คลังสินค้า)<br
-                  class="hidden md:inline"
-                />
-                ที่ห้องรับรองลูกค้าเพื่อรอนำสินค้าออกจากตู้สินค้าของรถบรรทุก
-              </p>
-            </div>
-          </div>
-
-          <!-- ขั้นตอนที่ 5 -->
-          <div class="step-card">
-            <div class="step-card-badge">
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 mr-2"
-              ></span>
-              ขั้นตอนที่ 5
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 ml-2"
-              ></span>
-            </div>
-            <div class="step-img-frame">
-              <div class="step-img-inner">
-                <img src="./images/NS_7.jpg" alt="ขั้นตอนที่ 5" />
-              </div>
-            </div>
-            <div class="step-content">
-              <p class="step-desc text-sm md:text-base font-normal">
-                เมื่อถึงคิวการฝากของลูกค้าเจ้าหน้าที่คลังสินค้าจะทำการตรวจเช็คหมายเลขซีล<br
-                  class="hidden md:inline"
-                />
-                สภาพของซีล ทะเบียนรถ เบอร์ตู้ และจดอุณหภูมิของตู้สินค้า<br
-                  class="hidden md:inline"
-                />
-                จากนั้นเจ้าหน้าที่คลังสินค้าจะตัดซีลออกและเปิดตู้<br
-                  class="hidden md:inline"
-                />
-                พร้อมเช็คสภาพของวัตถุดิบแช่แข็งที่อยู่ภายในตู้สินค้า
-              </p>
-            </div>
-          </div>
-
-          <!-- ขั้นตอนที่ 6 -->
-          <div class="step-card">
-            <div class="step-card-badge">
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 mr-2"
-              ></span>
-              ขั้นตอนที่ 6
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 ml-2"
-              ></span>
-            </div>
-            <div class="step-img-frame">
-              <div class="step-img-inner">
-                <img src="./images/NS_8.jpg" alt="ขั้นตอนที่ 6" />
-              </div>
-            </div>
-            <div class="step-content">
-              <p class="step-desc text-sm md:text-base font-normal">
-                เมื่อทำการตรวจเช็คทุกอย่างเสร็จสิ้น<br
-                  class="hidden md:inline"
-                />
-                เจ้าหน้าที่คลังสินค้าจะทำการโหลดวัตถุดิบในตู้สินค้าของรถบรรทุก<br
-                  class="hidden md:inline"
-                />
-                ออกมาใส่ตะแกรงที่เตรียมไว้ และจัดเรียงเฉลี่ยให้พอดีกับตะแกรง
-              </p>
-            </div>
-          </div>
-
-          <!-- ขั้นตอนที่ 7 -->
-          <div class="step-card">
-            <div class="step-card-badge">
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 mr-2"
-              ></span>
-              ขั้นตอนที่ 7
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 ml-2"
-              ></span>
-            </div>
-            <div class="step-img-frame">
-              <div class="step-img-inner">
-                <img src="./images/NS_9.jpg" alt="ขั้นตอนที่ 7" />
-              </div>
-            </div>
-            <div class="step-content">
-              <p class="step-desc text-sm md:text-base font-normal">
-                ระหว่างขั้นตอนการโหลดสินค้าวัตถุดิบลงตะแกรง<br
-                  class="hidden md:inline"
-                />
-                เจ้าหน้าที่คลังสินค้าจะทำการสุ่มตรวจอุณหภูมิของสินค้าวัตถุดิบ<br
-                  class="hidden md:inline"
-                />
-                ภายในตู้สินค้าของรถบรรทุก ซึ่งมีด้วยกัน 3 ช่วงคือ<br
-                  class="hidden md:inline"
-                />
-                ท้ายตู้ กลางตู้ และหน้าตู้
-              </p>
-            </div>
-          </div>
-
-          <!-- ขั้นตอนที่ 8 -->
-          <div class="step-card">
-            <div class="step-card-badge">
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 mr-2"
-              ></span>
-              ขั้นตอนที่ 8
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 ml-2"
-              ></span>
-            </div>
-            <div class="step-img-frame">
-              <div class="step-img-inner">
-                <img src="./images/NS_10.jpg" alt="ขั้นตอนที่ 8" />
-              </div>
-            </div>
-            <div class="step-content">
-              <p class="step-desc text-sm md:text-base font-normal">
-                เมื่อโหลดสินค้าลงตะแกรงจนพอดีตะแกรงแล้ว<br
-                  class="hidden md:inline"
-                />
-                เจ้าหน้าที่คลังสินค้าที่ทำหน้าที่ขับรถโฟล์คลิฟท์<br
-                  class="hidden md:inline"
-                />
-                จะทำการยกตะแกรงขึ้นเพื่อนำสินค้าที่จัดเรียงพอดีกับตะแกรง<br
-                  class="hidden md:inline"
-                />
-                ไปพักไว้ที่ห้องชั่งน้ำหนักสินค้าเพื่อรอชั่งน้ำหนักสินค้าในขั้นต่อไป
-              </p>
-            </div>
-          </div>
-
-          <!-- ขั้นตอนที่ 9 -->
-          <div class="step-card">
-            <div class="step-card-badge">
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 mr-2"
-              ></span>
-              ขั้นตอนที่ 9
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 ml-2"
-              ></span>
-            </div>
-            <div class="step-img-frame">
-              <div class="step-img-inner">
-                <img src="./images/NS_11.jpg" alt="ขั้นตอนที่ 9" />
-              </div>
-            </div>
-            <div class="step-content">
-              <p class="step-desc text-sm md:text-base font-normal">
-                เจ้าหน้าที่คลังสินค้าที่ทำหน้าที่ขับรถโฟล์คลิฟท์ทำการยกสินค้าวัตถุดิบที่ตั้งพักไว้<br
-                  class="hidden md:inline"
-                />
-                มาชั่งน้ำหนักต่อตะแกรงจากนั้นเจ้าหน้าที่คลังสินค้าจะทำการจดบันทึกน้ำหนัก<br
-                  class="hidden md:inline"
-                />
-                และติดป้าย QR CODE แสดงรายละเอียดสินค้า
-              </p>
-            </div>
-          </div>
-
-          <!-- ขั้นตอนที่ 10 -->
-          <div class="step-card">
-            <div class="step-card-badge">
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 mr-2"
-              ></span>
-              ขั้นตอนที่ 10
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 ml-2"
-              ></span>
-            </div>
-            <div class="step-img-frame">
-              <div class="step-img-inner">
-                <img src="./images/NS_12.jpg" alt="ขั้นตอนที่ 10" />
-              </div>
-            </div>
-            <div class="step-content">
-              <p class="step-desc text-sm md:text-base font-normal">
-                เจ้าหน้าที่คลังสินค้า ใช้ PDA สแกน QR CODE
-                ของป้ายสินค้าหน้าตะแกรง<br class="hidden md:inline" />
-                เพื่อบันทึกข้อมูลสินค้า ลงในระบบ WMS
-              </p>
-            </div>
-          </div>
-
-          <!-- ขั้นตอนที่ 11 -->
-          <div class="step-card">
-            <div class="step-card-badge">
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 mr-2"
-              ></span>
-              ขั้นตอนที่ 11
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 ml-2"
-              ></span>
-            </div>
-            <div class="step-img-frame">
-              <div class="step-img-inner">
-                <img src="./images/NS_13.jpg" alt="ขั้นตอนที่ 11" />
-              </div>
-            </div>
-            <div class="step-content">
-              <p class="step-desc text-sm md:text-base font-normal">
-                เมื่อเจ้าหน้าที่คลังสินค้าทำการบันทึกข้อมูลลงในระบบ WMS แล้ว<br
-                  class="hidden md:inline"
-                />
-                เจ้าหน้าที่คลังสินค้าจะนำแผ่นฟิล์มยืดมาพันรอบๆตะแกรง<br
-                  class="hidden md:inline"
-                />
-                และรอเก็บสินค้าเข้าห้องเก็บสินค้าในขั้นต่อไป
-              </p>
-            </div>
-          </div>
-
-          <!-- ขั้นตอนที่ 12 -->
-          <div class="step-card">
-            <div class="step-card-badge">
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 mr-2"
-              ></span>
-              ขั้นตอนที่ 12
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 ml-2"
-              ></span>
-            </div>
-            <div class="step-img-frame">
-              <div class="step-img-inner">
-                <img src="./images/NS_14.jpg" alt="ขั้นตอนที่ 12" />
-              </div>
-            </div>
-            <div class="step-content">
-              <p class="step-desc text-sm md:text-base font-normal">
-                เจ้าหน้าที่คลังสินค้าที่ทำหน้าที่ขับรถโฟล์คลิฟท์ยกตะแกรงสินค้า<br
-                  class="hidden md:inline"
-                />
-                ไปเก็บในที่ห้องเก็บสินค้าที่จัดเตรียมไว้
-              </p>
-            </div>
-          </div>
-
-          <!-- ขั้นตอนที่ 13 -->
-          <div class="step-card">
-            <div class="step-card-badge">
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 mr-2"
-              ></span>
-              ขั้นตอนที่ 13
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 ml-2"
-              ></span>
-            </div>
-            <div class="step-img-frame">
-              <div class="step-img-inner">
-                <img src="./images/NS_15.jpg" alt="ขั้นตอนที่ 13" />
-              </div>
-            </div>
-            <div class="step-content">
-              <p class="step-desc text-sm md:text-base font-normal">
-                เมื่อทำการโหลดสินค้า เข้า หรือ ออก
-                เสร็จแล้วให้นายหัวรถบรรทุกทำการขับรถ<br
-                  class="hidden md:inline"
-                />
-                ขึ้นตาชั่งน้ำหนัก เพื่อบันทึกข้อมูลในขั้นตอนสุดท้าย
-              </p>
-            </div>
-          </div>
-
-          <!-- ขั้นตอนที่ 14 -->
-          <div class="step-card">
-            <div class="step-card-badge">
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 mr-2"
-              ></span>
-              ขั้นตอนที่ 14
-              <span
-                class="inline-block w-2 h-2 rounded-full bg-sky-400 ml-2"
-              ></span>
-            </div>
-            <div class="step-img-frame">
-              <div class="step-img-inner">
-                <img src="./images/NS_16.jpg" alt="ขั้นตอนที่ 14" />
-              </div>
-            </div>
-            <div class="step-content">
-              <p class="step-desc text-sm md:text-base font-normal">
-                นายหัวรถบรรทุกสินค้าทำการติดต่อห้องที่บันทึกข้อมูลในตอนแรก<br
-                  class="hidden md:inline"
-                />
-                ตรงข้ามตราชั่งเพื่อส่งใบบันทึกจากฝ่ายข้อมูล และแลกบัตรคืนกับ
-                รปภ.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
 
     <!-- Footer Section -->
     <footer
