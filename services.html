@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>บริการของเรา - บริษัท เอ็น เอส โคลด์ สโตเรจ จำกัด</title>
+    <link rel="icon" type="image/png" href="./images/Logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .service-card-new {
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 24px;
+        padding: 18px;
+        box-shadow: 0 12px 30px -10px rgba(0, 34, 85, 0.12);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-decoration: none;
+      }
+      .service-img-wrapper {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        border-radius: 18px;
+        overflow: hidden;
+        background-color: #f8fafc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .service-img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .service-links {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 0.75rem;
+      }
+      .service-link-item {
+        font-size: 0.9rem;
+        color: #0284c7;
+        padding: 6px 18px;
+        border-radius: 9999px;
+        background-color: #f0f9ff;
+        border: 1px solid #bae6fd;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body
+    class="text-gray-800 antialiased flex flex-col min-h-screen bg-[#f4f7fb]"
+  >
+    <header class="bg-white pt-3 shadow-sm sticky top-0 text-center py-3">
+      <a href="index.html" class="text-xl font-bold text-[#003380]"
+        >บริษัท เอ็น เอส โคลด์ สโตเรจ จำกัด (หน้าแรก)</a
+      >
+    </header>
+    <main class="container mx-auto px-4 max-w-5xl py-12 flex-grow">
+      <h1 class="text-3xl font-bold text-blue-800 text-center mb-8">
+        บริการของเรา
+      </h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <a href="service-freeze.html" class="service-card-new">
+          <div class="service-img-wrapper">
+            <img src="./images/ฟรีส (Freeze).jpeg" alt="ฟรีส" />
+          </div>
+          <h3 class="text-xl font-semibold text-center mt-4">
+            บริการฟรีส (Freeze)
+          </h3>
+        </a>
+        <div class="service-card-new">
+          <div class="service-img-wrapper">
+            <img src="./images/รับฝากเก็บสินค้า.jpeg" alt="รับฝากเก็บ" />
+          </div>
+          <h3 class="text-xl font-semibold text-center mt-4">
+            บริการรับฝากเก็บสินค้า
+          </h3>
+          <div class="service-links">
+            <a href="service-finished-goods.html" class="service-link-item"
+              >สินค้าสำเร็จรูป</a
+            >
+            <a href="service-raw-materials.html" class="service-link-item"
+              >สินค้าวัตถุดิบแช่แข็ง</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-[#002255] text-white py-6 text-center">
+      <p>Copyright © 2011-2026 NS COLD STORAGE CO.,LTD.</p>
+    </footer>
+  </body>
+</html>

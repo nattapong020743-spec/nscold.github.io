@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ติดต่อเรา - บริษัท เอ็น เอส โคลด์ สโตเรจ จำกัด</title>
+    <link rel="icon" type="image/png" href="./images/Logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Kanit", sans-serif;
+        background-color: #f4f7fb;
+      }
+      .text-blue-custom {
+        color: #004d99;
+      }
+      .bg-blue-custom {
+        background-color: #005ce6;
+      }
+      .bg-blue-dark {
+        background-color: #002255;
+      }
+      .bg-red-custom {
+        background-color: #e62e2d;
+      }
+      @media (min-width: 769px) {
+        .desktop-Command-bar {
+          background: linear-gradient(
+            90deg,
+            #001f4d 0%,
+            #003380 50%,
+            #001f4d 100%
+          );
+          border-bottom: 3px solid #005ce6;
+        }
+        .nav-item {
+          padding: 10px 18px;
+          border-radius: 12px;
+          color: #e2e8f0;
+          font-weight: 500;
+        }
+        .nav-item.active-desktop {
+          background: linear-gradient(135deg, #0066ff 0%, #0044cc 100%);
+          color: #ffffff !important;
+        }
+        .dropdown-menu {
+          display: none;
+          position: absolute;
+          background-color: #ffffff;
+          min-width: 260px;
+          z-index: 50;
+          top: calc(100% + 8px);
+          left: 0;
+          border-radius: 16px;
+          padding: 8px;
+          border-top: 4px solid #005ce6;
+        }
+        .group:hover > .dropdown-menu {
+          display: block;
+        }
+        .dropdown-item {
+          color: #1e293b;
+          padding: 11px 16px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-radius: 10px;
+          font-size: 14px;
+        }
+      }
+      @media (max-width: 768px) {
+        .mobile-header-grid {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          grid-template-areas: "logo actions" "title title";
+          gap: 12px;
+          align-items: center;
+        }
+        #mobile-menu-container {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          background-color: white;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          z-index: 100;
+        }
+        #mobile-menu-container.show {
+          display: flex;
+        }
+      }
+      .contact-card {
+        background-color: #ffffff;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        border: 1px solid #e2e8f0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .icon-circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body class="text-gray-800 antialiased flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-white pt-3 md:pt-4 shadow-sm z-50 relative sticky top-0">
+      <div class="container mx-auto px-4 max-w-6xl md:pb-3">
+        <div
+          class="mobile-header-grid md:flex md:flex-row md:justify-between md:items-center relative min-h-[90px]"
+        >
+          <div class="header-logo flex items-center space-x-2">
+            <button
+              id="hamburger-btn"
+              class="md:hidden text-blue-custom text-2xl p-2"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+            <a href="index.html" class="flex items-center space-x-4">
+              <img
+                src="./images/Logo_NS.png"
+                alt="Logo"
+                class="h-16 object-contain"
+              />
+            </a>
+          </div>
+          <div class="header-title text-center">
+            <h1 class="text-lg md:text-[26px] font-semibold text-[#003380]">
+              บริษัท เอ็น เอส โคลด์ สโตเรจ จำกัด
+            </h1>
+          </div>
+          <div class="header-actions flex items-center space-x-3">
+            <a
+              href="contact-us.html"
+              class="bg-red-600 text-white py-2 px-4 rounded-2xl flex items-center space-x-2"
+              ><i class="fas fa-phone-volume"></i><span>ติดต่อด่วน</span></a
+            >
+          </div>
+        </div>
+      </div>
+      <nav
+        id="mobile-menu-container"
+        class="md:block desktop-Command-bar md:py-2.5"
+      >
+        <div class="container mx-auto px-4 max-w-6xl">
+          <ul
+            class="md:flex md:justify-center md:space-x-2 text-sm font-medium"
+          >
+            <li><a href="index.html" class="nav-item block p-3">หน้าแรก</a></li>
+            <li>
+              <a href="about-us.html" class="nav-item block p-3"
+                >เกี่ยวกับเรา</a
+              >
+            </li>
+            <li>
+              <a href="careers.html" class="nav-item block p-3"
+                >ร่วมงานกับเรา</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact-us.html"
+                class="nav-item active-desktop block p-3"
+                >ติดต่อเรา</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container mx-auto px-4 max-w-5xl py-12 flex-grow">
+      <div
+        class="bg-blue-600 text-white text-center py-4 rounded-2xl text-2xl font-medium mb-10 shadow-lg"
+      >
+        ช่องทางการติดต่อ
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div class="contact-card">
+          <div class="icon-circle bg-green-100 text-green-600">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <h3 class="font-medium text-gray-800 text-lg mb-2">โทรศัพท์</h3>
+          <div class="text-gray-700 font-medium text-sm space-y-1">
+            <div>074-336990-1</div>
+            <div>089-7377236</div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="icon-circle bg-[#e0f8e0] text-[#00b900]">
+            <i class="fab fa-line"></i>
+          </div>
+          <h3 class="font-medium text-gray-800 text-lg mb-2">LINE ID</h3>
+          <div
+            class="text-gray-800 font-semibold bg-gray-50 px-4 py-2 rounded-lg border"
+          >
+            0897377236
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="icon-circle bg-red-100 text-red-600">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3 class="font-medium text-gray-800 text-lg mb-2">อีเมล (Email)</h3>
+          <a
+            href="mailto:mk_nscold@nscold.com"
+            class="text-blue-600 font-medium hover:underline text-sm break-all"
+            >mk_nscold@nscold.com</a
+          >
+        </div>
+        <div class="contact-card">
+          <div class="icon-circle bg-blue-100 text-blue-600">
+            <i class="fab fa-facebook-f"></i>
+          </div>
+          <h3 class="font-medium text-gray-800 text-lg mb-2">Facebook</h3>
+          <a
+            href="https://www.facebook.com/NSColdStorage"
+            target="_blank"
+            class="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium text-sm hover:bg-blue-700 w-full"
+            >เข้าชม Fanpage</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-blue-dark text-white pt-16 border-t-4 border-[#005ce6]">
+      <div class="container mx-auto px-4 max-w-6xl pb-10 text-center">
+        <p>บริษัท เอ็น เอส โคลด์ สโตเรจ จำกัด | โทร. 074-336990-1</p>
+      </div>
+    </footer>
+    <script>
+      document
+        .getElementById("hamburger-btn")
+        .addEventListener("click", function () {
+          document
+            .getElementById("mobile-menu-container")
+            .classList.toggle("show");
+        });
+    </script>
+  </body>
+</html>

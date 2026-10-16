@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      บริการส่งมอบสินค้า (สินค้าสำเร็จรูป) - บริษัท เอ็น เอส โคลด์ สโตเรจ จำกัด
+    </title>
+    <link rel="icon" type="image/png" href="./images/Logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Kanit", sans-serif;
+        background-color: #f4f7fb;
+      }
+      .step-card {
+        background: #ffffff;
+        border-radius: 24px;
+        border: 1px solid rgba(0, 92, 230, 0.1);
+        box-shadow: 0 12px 30px -10px rgba(0, 34, 85, 0.08);
+        position: relative;
+        margin-top: 1.5rem;
+      }
+      .step-card-header {
+        background: linear-gradient(135deg, #001f4d 0%, #005ce6 100%);
+        color: #ffffff;
+        position: absolute;
+        top: -18px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 6px 28px;
+        border-radius: 9999px;
+        font-weight: 600;
+      }
+      .step-img-inner img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body class="text-gray-800 antialiased flex flex-col min-h-screen">
+    <header class="bg-white pt-3 md:pt-4 shadow-sm z-50 sticky top-0">
+      <div class="container mx-auto px-4 max-w-6xl text-center py-3">
+        <a href="index.html" class="text-xl font-bold text-[#003380]"
+          >บริษัท เอ็น เอส โคลด์ สโตเรจ จำกัด (หน้าแรก)</a
+        >
+      </div>
+    </header>
+
+    <main class="container mx-auto px-4 max-w-5xl py-8 flex-grow">
+      <div class="text-center mb-8">
+        <h1 class="text-2xl md:text-4xl font-bold text-blue-800 mb-2">
+          บริการ "ส่งมอบสินค้า" (สินค้าสำเร็จรูป)
+        </h1>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="step-card p-6">
+          <div class="step-card-header">ขั้นตอนที่ 1</div>
+          <div class="step-img-inner h-48 mb-4">
+            <img src="./images/3__.jpg" alt="ขั้นตอนที่ 1" />
+          </div>
+          <p class="text-slate-700 text-center">
+            ลูกค้าแจ้งฝ่ายการตลาดล่วงหน้าอย่างน้อย 1 วัน เพื่อเตรียมสินค้า
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-[#002255] text-white py-6 text-center">
+      <p>Copyright © 2011-2026 NS COLD STORAGE CO.,LTD.</p>
+    </footer>
+  </body>
+</html>
