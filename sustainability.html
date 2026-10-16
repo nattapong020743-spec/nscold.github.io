@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>บริการของเรา - บริษัท เอ็น เอส โคลด์ สโตเรจ จำกัด</title>
+    <title>การพัฒนาที่ยั่งยืน - บริษัท เอ็น เอส โคลด์ สโตเรจ จำกัด</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./images/Logo.png" />
 
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
@@ -34,86 +34,6 @@
       }
       .bg-red-custom {
         background-color: #e62e2d;
-      }
-
-      .service-card-new {
-        background-color: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 24px;
-        padding: 18px;
-        box-shadow: 0 12px 30px -10px rgba(0, 34, 85, 0.12);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-        text-decoration: none;
-        position: relative;
-      }
-      .service-card-new:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 25px 45px -10px rgba(0, 92, 230, 0.22);
-        border-color: #38bdf8;
-      }
-
-      .service-img-wrapper {
-        width: 100%;
-        aspect-ratio: 4 / 3;
-        border-radius: 18px;
-        overflow: hidden;
-        background-color: #f8fafc;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid #edf2f7;
-      }
-      .service-img-wrapper img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        transition: transform 0.5s ease;
-      }
-      .service-card-new:hover .service-img-wrapper img {
-        transform: scale(1.04);
-      }
-
-      .service-title {
-        font-size: 1.25rem;
-        font-weight: 600;
-        color: #1e293b;
-        margin-top: 1.25rem;
-        margin-bottom: 0.5rem;
-        text-align: center;
-        transition: color 0.3s ease;
-      }
-      .service-card-new:hover .service-title {
-        color: #005ce6;
-      }
-
-      .service-links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 0.75rem;
-        margin-bottom: 0.5rem;
-      }
-      .service-link-item {
-        font-size: 0.9rem;
-        color: #0284c7;
-        text-decoration: none;
-        padding: 6px 18px;
-        border-radius: 9999px;
-        background-color: #f0f9ff;
-        border: 1px solid #bae6fd;
-        transition: all 0.25s ease;
-        font-weight: 500;
-      }
-      .service-link-item:hover {
-        background-color: #005ce6;
-        color: #ffffff;
-        border-color: #005ce6;
-        box-shadow: 0 4px 12px rgba(0, 92, 230, 0.25);
       }
 
       @media (min-width: 769px) {
@@ -366,6 +286,15 @@
           transform: rotate(180deg);
         }
       }
+
+      .content-card {
+        background-color: #ffffff;
+        border-radius: 1.5rem;
+        box-shadow: 0 10px 25px -5px rgba(0, 34, 85, 0.08);
+        border: 1px solid #e2e8f0;
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
     </style>
   </head>
   <body class="text-gray-800 antialiased flex flex-col min-h-screen">
@@ -491,29 +420,6 @@
         id="mobile-menu-container"
         class="md:block desktop-Command-bar md:py-2.5"
       >
-        <div
-          class="px-4 py-3 sm:hidden flex justify-center bg-slate-50 border-b border-slate-100"
-        >
-          <div
-            class="flex items-center bg-white rounded-full p-1 shadow-inner border border-slate-200 w-full max-w-[200px] justify-center"
-          >
-            <button
-              id="btn-th-mobile"
-              onclick="setLanguage('th')"
-              class="w-1/2 px-4 py-1.5 rounded-full bg-blue-custom text-white font-semibold shadow-sm text-sm"
-            >
-              TH
-            </button>
-            <button
-              id="btn-en-mobile"
-              onclick="setLanguage('en')"
-              class="w-1/2 px-4 py-1.5 rounded-full text-slate-500 font-medium text-sm"
-            >
-              EN
-            </button>
-          </div>
-        </div>
-
         <div class="container mx-auto px-0 md:px-4 max-w-6xl">
           <ul
             class="mobile-nav-ul md:flex md:flex-wrap md:justify-center md:items-center md:space-x-1 lg:space-x-2 text-sm md:text-[15px] font-medium"
@@ -527,7 +433,7 @@
             <li class="relative group">
               <a
                 href="#"
-                class="nav-item active-desktop flex items-center justify-between md:justify-start"
+                class="nav-item flex items-center justify-between md:justify-start"
                 onclick="toggleMobileMenu(event, 'servicesMenu', this)"
               >
                 <span data-i18n="navServices">บริการของเรา</span>
@@ -538,7 +444,7 @@
               <div id="servicesMenu" class="dropdown-menu">
                 <a
                   href="services.html"
-                  class="dropdown-item font-medium text-blue-600 bg-blue-50 md:bg-transparent"
+                  class="dropdown-item"
                   data-i18n="navServices"
                   >บริการของเรา</a
                 >
@@ -558,9 +464,6 @@
                     <span data-i18n="srvStorage">บริการรับฝากเก็บสินค้า</span>
                     <i
                       class="fas fa-caret-right text-blue-custom text-xs ml-2 md:block hidden"
-                    ></i>
-                    <i
-                      class="fas fa-caret-down text-blue-custom text-xs ml-2 md:hidden mobile-toggle-icon"
                     ></i>
                   </a>
                   <div id="storageMenu" class="submenu">
@@ -596,9 +499,6 @@
                     <i
                       class="fas fa-caret-right text-blue-custom text-xs ml-2 md:block hidden"
                     ></i>
-                    <i
-                      class="fas fa-caret-down text-blue-custom text-xs ml-2 md:hidden mobile-toggle-icon"
-                    ></i>
                   </a>
                   <div id="deliveryMenu" class="submenu">
                     <a
@@ -621,7 +521,7 @@
             <li class="relative group">
               <a
                 href="#"
-                class="nav-item flex items-center justify-between md:justify-start"
+                class="nav-item active-desktop flex items-center justify-between md:justify-start"
                 onclick="toggleMobileMenu(event, 'aboutMenu', this)"
               >
                 <span data-i18n="navAbout">เกี่ยวกับเรา</span>
@@ -644,7 +544,7 @@
                 >
                 <a
                   href="sustainability.html"
-                  class="dropdown-item"
+                  class="dropdown-item font-medium text-blue-600 bg-blue-50 md:bg-transparent"
                   data-i18n="aboutSustainability"
                   >การพัฒนาที่ยั่งยืน</a
                 >
@@ -677,7 +577,6 @@
                 href="https://www.facebook.com/NSColdStorage"
                 target="_blank"
                 class="nav-item block"
-                data-i18n="navFanpage"
                 >Fanpage</a
               >
             </li>
@@ -696,7 +595,7 @@
 
     <!-- Hero Gradient Stage -->
     <div
-      class="relative bg-gradient-to-b from-[#001a40] via-[#002b66] to-[#f4f7fb] pt-8 md:pt-12 pb-16 overflow-hidden flex-grow"
+      class="relative bg-gradient-to-b from-[#001a40] via-[#002b66] to-[#f4f7fb] pt-8 md:pt-12 pb-12 overflow-hidden flex-grow"
     >
       <div
         class="hidden md:block absolute top-10 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"
@@ -706,97 +605,44 @@
       ></div>
 
       <!-- Main Content -->
-      <main class="container mx-auto px-4 max-w-5xl relative z-10">
+      <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div
           class="bg-gradient-to-r from-[#003380] via-[#005ce6] to-[#003380] text-white text-center py-5 rounded-2xl text-2xl md:text-3xl font-medium mb-12 shadow-xl border border-white/20 relative overflow-hidden"
         >
           <i
-            class="fas fa-cubes text-7xl text-white/5 absolute -left-2 -bottom-3 pointer-events-none transform -rotate-12"
+            class="fas fa-leaf text-7xl text-white/5 absolute -left-2 -bottom-3 pointer-events-none transform -rotate-12"
           ></i>
-          <span class="relative z-10" data-i18n="navServices"
-            >บริการของเรา</span
-          >
+          <span class="relative z-10" data-i18n="aboutSustainability">
+            การพัฒนาที่ยั่งยืน
+          </span>
         </div>
 
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 px-2 md:px-6"
-        >
-          <a href="service-freeze.html" class="service-card-new group">
-            <div class="service-img-wrapper">
-              <img src="./images/ฟรีส (Freeze).jpeg" alt="บริการฟรีส" />
-            </div>
-            <div>
-              <h3 class="service-title" data-i18n="srvFreeze">
-                บริการฟรีส (Freeze)
-              </h3>
-            </div>
+        <div class="content-card border border-slate-200/80">
+          <a
+            href="energy-detail.html"
+            class="block relative rounded-2xl overflow-hidden shadow-md mb-8 hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer group bg-slate-100"
+          >
+            <img
+              src="./images/Energy.jpg"
+              alt="ด้านพลังงาน Solar Energy"
+              class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-500"
+            />
           </a>
 
-          <div class="service-card-new group border-[#e2e8f0]">
-            <div class="service-img-wrapper">
-              <img
-                src="./images/รับฝากเก็บสินค้า.jpeg"
-                alt="บริการรับฝากเก็บสินค้า"
-              />
-            </div>
-            <div>
-              <h3 class="service-title" data-i18n="srvStorage">
-                บริการรับฝากเก็บสินค้า
-              </h3>
-              <div class="service-links">
-                <a
-                  href="service-finished-goods.html"
-                  class="service-link-item"
-                  data-i18n="subFinishedGoods"
-                  >สินค้าสำเร็จรูป</a
-                >
-                <a
-                  href="service-raw-materials.html"
-                  class="service-link-item"
-                  data-i18n="subRawMaterials"
-                  >สินค้าวัตถุดิบแช่แข็ง</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <a href="services.html" class="service-card-new group">
-            <div class="service-img-wrapper">
-              <img
-                src="./images/คัดขนาดปลาทูน่า.jpeg"
-                alt="บริการคัดขนาดปลาทูน่า"
-              />
-            </div>
-            <div>
-              <h3 class="service-title" data-i18n="srvSorting">
-                บริการคัดขนาดปลาทูน่า
-              </h3>
-            </div>
-          </a>
-
-          <div class="service-card-new group border-[#e2e8f0]">
-            <div class="service-img-wrapper">
-              <img src="./images/บริการส่งมอบ.jpg" alt="บริการส่งมอบสินค้า" />
-            </div>
-            <div>
-              <h3 class="service-title" data-i18n="navDelivery">
-                บริการส่งมอบสินค้า
-              </h3>
-              <div class="service-links">
-                <a
-                  href="delivery-finished-goods.html"
-                  class="service-link-item"
-                  data-i18n="subFinishedGoods"
-                  >สินค้าสำเร็จรูป</a
-                >
-                <a
-                  href="delivery-raw-materials.html"
-                  class="service-link-item"
-                  data-i18n="subRawMaterials"
-                  >สินค้าวัตถุดิบแช่แข็ง</a
-                >
-              </div>
-            </div>
+          <div class="text-center border-t border-gray-100 pt-6">
+            <h3
+              class="text-xl md:text-2xl font-medium text-gray-800 mb-2"
+              data-i18n="relatedTopicLabel"
+            >
+              สิ่งที่เกี่ยวข้อง
+            </h3>
+            <a
+              href="energy-detail.html"
+              class="text-blue-600 font-medium text-base md:text-lg hover:text-blue-800 hover:underline cursor-pointer block transition-colors"
+              data-i18n="relatedTopicVal"
+            >
+              ระบบพลังงานแสงอาทิตย์ (Solar Energy System)
+            </a>
           </div>
         </div>
       </main>
@@ -997,6 +843,11 @@
           navContact: "ติดต่อเรา",
           navActivities: "กิจกรรม",
           navPrivacy: "นโยบายการคุ้มครองข้อมูลส่วนบุคคล",
+
+          aboutSustainability: "การพัฒนาที่ยั่งยืน",
+          relatedTopicLabel: "สิ่งที่เกี่ยวข้อง",
+          relatedTopicVal: "ระบบพลังงานแสงอาทิตย์ (Solar Energy System)",
+
           footerDesc:
             "บริการแช่แข็ง รับฝากเก็บ คัดขนาดและส่งมอบอาหารทะเลแช่แข็ง<br />สินค้าปศุสัตว์แช่แข็ง และผลไม้แช่แข็ง",
           addrLabel: "ที่ตั้งบริษัท",
@@ -1024,6 +875,11 @@
           navContact: "Contact Us",
           navActivities: "Activities",
           navPrivacy: "Privacy Policy",
+
+          aboutSustainability: "Sustainability",
+          relatedTopicLabel: "Related Topic",
+          relatedTopicVal: "Solar Energy System",
+
           footerDesc:
             "Freezing, cold storage, grading, and delivery of frozen seafood, livestock, and fruits.",
           addrLabel: "Address",
