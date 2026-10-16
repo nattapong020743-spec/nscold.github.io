@@ -1102,6 +1102,7 @@
           <div
             class="lg:w-1/4 flex flex-col items-center lg:items-end pr-0 lg:pr-10 mt-8 lg:mt-0"
           >
+            <!-- ส่วนโลโก้และเฟสบุ๊ค -->
             <div class="flex items-center space-x-5 mb-5">
               <img
                 src="./images/Logo.png"
@@ -1117,6 +1118,7 @@
               </a>
             </div>
 
+            <!-- ส่วนแผนที่ Google Maps -->
             <div class="w-full max-w-[280px]">
               <div class="w-full h-[1px] bg-white/15 mb-3"></div>
               <div
@@ -1142,6 +1144,7 @@
           </div>
         </div>
       </div>
+      <!-- แถบสีแดง Copyright (2011-2026 พร้อมโลโก้) -->
       <div class="bg-red-custom py-2">
         <div
           class="container mx-auto px-4 flex items-center justify-center space-x-2 text-[10px] md:text-xs text-white"
@@ -1159,6 +1162,7 @@
       </div>
     </footer>
 
+    <!-- STREAMING_CHUNK:Adding mobile hamburger menu script and internationalization -->
     <script>
       function isMobileDevice() {
         return (
@@ -1199,6 +1203,7 @@
         setupPhoneLinks();
       });
 
+      // จัดการเมนู Hamburger บนมือถือ
       document
         .getElementById("hamburger-btn")
         .addEventListener("click", function () {
@@ -1210,6 +1215,7 @@
         if (window.innerWidth > 768) return;
         event.preventDefault();
 
+        // ปิดเมนูย่อยอื่นๆ ที่เปิดอยู่
         const allMenus = document.querySelectorAll(
           ".dropdown-menu.show, .submenu.show",
         );
@@ -1313,8 +1319,6 @@
           addrValue:
             "150/2 Moo 3, Khao Rup Chang, Mueang Songkhla, Songkhla 90000",
           phoneLabel: "Phone",
-          contactBottomDesc:
-            "NS Cold Storage Co., Ltd. specializes in cold storage, freezing, and sorting services that meet customers' high-quality demands, including standardized logistics and delivery management.",
           copyright:
             "Copyright © 2011-2026 NS COLD STORAGE CO.,LTD. All Rights Reserved.",
         },
@@ -1328,6 +1332,7 @@
           }
         });
 
+        // จัดการสถานะปุ่มเปลี่ยนภาษา (แยก ID ของ Mobile และ Desktop)
         const btnThDesktop = document.getElementById("btn-th-desktop");
         const btnEnDesktop = document.getElementById("btn-en-desktop");
         const btnThMobile = document.getElementById("btn-th-mobile");
